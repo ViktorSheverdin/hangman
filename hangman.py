@@ -9,7 +9,7 @@ print(chr(27) + "[2J")
 print(logo)
 # word_list = ["aardvark", "baboon", "camel"]
 chosen_word = random.choice(word_list)
-print("For debug: %s" % (chosen_word))
+# print("For debug: %s" % (chosen_word))
 display = ["_" for char in chosen_word]
 guessed_letters = []
 print(display)
@@ -34,6 +34,7 @@ while not end_of_game:
         print("Letter %s is not in the word" % (guess))
         if lives <= 0:
             print("You lose! \nGave Over")
+            print("The word was: %s" % (chosen_word))
             end_of_game = True
             print(stages[0])
 
